@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:background="@drawable/bg_gradient"
+                >
+
+    <RelativeLayout android:id="@+id/mainContainer" android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:visibility="visible">
+        <LinearLayout android:id="@+id/addressContainer" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:orientation="vertical"
+                      android:gravity="center">
+            <TextView android:id="@+id/tv_address" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:textSize="24dp"
+                      android:text="DHAKA, BD"
+                android:textColor="@android:color/white"/>
+            <TextView android:id="@+id/tv_updated_at" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:textSize="14dp"
+                      android:text="20 April 2012, 20:08 PM"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+
+        <LinearLayout android:id="@+id/overviewContainer" android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:orientation="vertical"
+                      android:layout_centerInParent="true">
+
+            <TextView android:id="@+id/tv_status" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:textSize="18dp"
+                      android:layout_gravity="center"
+                      android:text="Clear Sky"
+                android:textColor="@android:color/white"/>
+            <TextView android:id="@+id/tv_temp" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:textSize="90dp"
+                      android:fontFamily="sans-serif-thin" android:layout_gravity="center"
+                      android:text="29°C"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tv_temp_min" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:text="Min Temp: 05:05 AM"
+                    android:textColor="@android:color/white"/>
+                <Space android:layout_width="50dp" android:layout_height="wrap_content"/>
+
+                <TextView android:id="@+id/tv_temp_max" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:text="Max Temp: 05:05 PM"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ProgressBar android:id="@+id/loader" android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" android:layout_centerInParent="true"
+                 android:visibility="gone"/>
+
+    <TextView android:id="@+id/errorText" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_centerInParent="true"
+              android:visibility="gone" android:text="Something went wrong"/>
+
+
+</RelativeLayout>
